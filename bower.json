@@ -1,0 +1,22 @@
+{
+  "name": "gulptest",
+  "description": "test work with gulp",
+  "main": "index.js",
+  "authors": [
+    "Gubin"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.3",
+    "bootstrap": "^3.3.6"
+  }
+}
