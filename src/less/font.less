@@ -1,0 +1,46 @@
+// Create deep font-face rule
+.add-font(@font-name, @font-url, @font-weight: normal, @font-style: normal){
+  font-family: '@{font-name}';
+  src: url('@{font-folder}/@{font-url}.eot');
+  src: url('@{font-folder}/@{font-url}.eot?#iefix') format('embedded-opentype'),
+  url('@{font-folder}/@{font-url}.woff') format('woff'),
+  url('@{font-folder}/@{font-url}.ttf') format('truetype'),
+  url('@{font-folder}/@{font-url}.svg#FontName') format('svg');
+  font-style: @font-style;
+  font-weight: @font-weight;
+}
+
+// Font icons
+@font-face {
+  .add-font('icons', 'icons/icomoon');
+}
+
+// OneDay font
+@font-face {
+  .add-font('OneDay', 'OneDay/OneDay');
+}
+
+// TF2 font
+@font-face {
+  .add-font('TF2', 'TF2/TF2');
+}
+
+// Roboto light font
+@font-face {
+  .add-font('Roboto', 'RobotoLight/Roboto-Light', 100);
+}
+
+// Roboto thin font
+@font-face {
+  .add-font('Roboto', 'RobotoThin/Roboto-Thin', 300);
+}
+
+// Roboto bold font
+@font-face {
+  .add-font('Roboto', 'RobotoBold/Roboto-Bold', 600);
+}
+
+// Roboto thin font
+@font-face {
+  .add-font('Roboto', 'RobotoBlack/Roboto-Black', 900);
+}
