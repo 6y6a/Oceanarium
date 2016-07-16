@@ -9,4 +9,15 @@ $(document).ready(function(){
         nextArrow: $('.arrow-right'),
         prevArrow: $('.arrow-left')
     });
+
+
+    // Animation through wow.js
+    var animateIn = new WOW({
+        boxClass: 'animateIn',
+        animateClass: 'animated fadeInUp',
+        offset: 300,
+        mobile: false
+    });
+
+    animateIn.init();
 });

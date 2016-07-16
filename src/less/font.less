@@ -5,14 +5,9 @@
   src: url('@{font-folder}/@{font-url}.eot?#iefix') format('embedded-opentype'),
   url('@{font-folder}/@{font-url}.woff') format('woff'),
   url('@{font-folder}/@{font-url}.ttf') format('truetype'),
-  url('@{font-folder}/@{font-url}.svg#FontName') format('svg');
+  url('@{font-folder}/@{font-url}.svg#@{font-name}') format('svg');
   font-style: @font-style;
   font-weight: @font-weight;
-}
-
-// Font icons
-@font-face {
-  .add-font('icons', 'icons/icomoon');
 }
 
 // OneDay font

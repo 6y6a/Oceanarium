@@ -17,10 +17,8 @@
   .slide-3 {
     .bg-img('slide3.jpg', #101f1f)
   }
-
-
-
 }
+
 .arrow-left,
 .arrow-right {
   position: absolute;
@@ -28,13 +26,25 @@
   width: 85px;
   height: 85px;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   border-radius: 50%;
   color: #fff;
 
   &:hover {
-    border-color:  darken(@color-hover, 10%);
-    color:  darken(@color-hover, 10%);
+    border-color:  @color-hover;
+    color:  @color-hover;
+
+    .triangle-left {
+      border-color: transparent @color-hover transparent transparent;
+      .transition();
+    }
+
+    .triangle-right {
+      border-color: transparent  transparent transparent @color-hover;
+      .transition();
+    }
+
+    .transition;
   }
 
   &:hover,
@@ -42,15 +52,33 @@
     outline: 0;
   }
 
-  .icon {
-    font-size: 22px;
+  .triangle-right,
+  .triangle-left {
+    position: absolute;
+    top: ~'calc(50% - 10px)';
+    border-width: 12.5px 20px;
+  }
+
+
+  [class^='icon-'] {
+    position: absolute;
+    top: ~'calc(50% - 20px)';
+    font-size: 40px;
   }
 }
 
 .arrow-left {
   left: -85px;
+
+  .triangle-left {
+    right: ~'calc(50% - 8px)';
+  }
 }
 
 .arrow-right {
   right: -85px;
+
+  .triangle-right {
+    right: ~'calc(50% - 32px)';
+  }
 }
