@@ -25,7 +25,7 @@ gulp.task('make:less', function(){
 });
 
 gulp.task('make:lib-less', function(){
-    return gulp.src(mainBowerFiles(['**/*.less', '**/animate.css']))
+    return gulp.src(mainBowerFiles('**/*.less'))
         .pipe(sourcemap.init())
         .pipe(concat('libs.css'))
         .pipe(less())
