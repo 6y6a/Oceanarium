@@ -1,3 +1,6 @@
+
+// Components of top-slider
+// Slides
 .top-slider {
 
   .slide-1,
@@ -19,6 +22,7 @@
   }
 }
 
+// Arrows
 .arrow-left,
 .arrow-right {
   position: absolute;
@@ -33,6 +37,7 @@
   &:hover {
     border-color:  @color-hover;
     color:  @color-hover;
+    .transition;
 
     .triangle-left {
       border-color: transparent @color-hover transparent transparent;
@@ -43,8 +48,6 @@
       border-color: transparent  transparent transparent @color-hover;
       .transition();
     }
-
-    .transition;
   }
 
   &:hover,
@@ -82,3 +85,99 @@
     right: ~'calc(50% - 32px)';
   }
 }
+
+// Description on slides
+.event {
+  position: relative;
+}
+
+.desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 20px;
+  background-color: #22262e;
+
+  h4 {
+    font: 100 16px/1 "Roboto", sans-serif;
+    color: #fff;
+  }
+
+  p {
+    margin-top: 5px;
+    font: 300 16px/1 "Roboto", sans-serif;
+    color: #b1b1b1;
+  }
+}
+
+// Date on slides
+.date {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  padding: 15px 10px 10px;
+  background-color: @color-hover;
+  color: #fff;
+  text-align: center;
+  border-top-right-radius: 10px;
+
+  .num {
+    font: 900 40px "Roboto", sans-serif;
+  }
+
+  .full {
+    font: 100 14px "Roboto", sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+// Components of event-slider
+.nav-event-slider {
+  margin: 15px 0;
+  line-height: 1;
+  text-align: right;
+}
+
+.position {
+  font: 100 24px "Roboto", sans-serif;
+  color: @color-text;
+}
+
+// Arrows
+.arrow-event-left {
+  margin-right: 10px;
+
+  .triangle-left {
+    border-color: transparent #000 transparent transparent;
+    border-width: 7px 11px;
+    .transition;
+
+    &:hover {
+      border-color: transparent @color-hover transparent transparent;
+    }
+  }
+}
+
+.arrow-event-right {
+  margin-left: 10px;
+
+  .triangle-right {
+    border-color: transparent  transparent transparent #000;
+    border-width: 7px 11px;
+    .transition(all 0.2s ease);
+
+    &:hover {
+      border-color: transparent  transparent transparent @color-hover;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

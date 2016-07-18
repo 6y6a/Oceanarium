@@ -1,0 +1,35 @@
+.future {
+  padding-top: 70px;
+  color: @color-text;
+
+  h2 {
+    margin-bottom: 30px;
+    font: 48px/1 @font-family;
+    word-spacing: 10px;
+    text-align: center;
+  }
+
+  ul {
+    font: 100 24px/1 "Roboto", sans-serif;
+    text-align: center;
+
+    li {
+      position: relative;
+      display: inline-block;
+      padding: 5px 0;
+      margin: 0 35px;
+
+
+      &:not(:last-child):after {
+        position: absolute;
+        right: -50% + 10px;
+        content: '•';
+        font-size: 25px;
+      }
+    }
+  }
+
+  .slick-slide {
+    margin-right: 6px;
+  }
+}

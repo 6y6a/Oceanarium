@@ -10,6 +10,16 @@ $(document).ready(function(){
         prevArrow: $('.arrow-left')
     });
 
+    // Slider for future events
+    $('.event-slider').slick({
+        draggable: false,
+        rows: 2,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: $('.arrow-event-right'),
+        prevArrow: $('.arrow-event-left')
+    });
+
 
     // Animation through wow.js
     var animateIn = new WOW({
