@@ -1,0 +1,31 @@
+.gallery {
+  [class^="col-"] {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover {
+      .hover {
+        top: 0;
+        padding-top: ~'calc(50% - 24px)';
+        opacity: 1;
+      }
+    }
+  }
+
+  .hover {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font: 48px/1 @font-family;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    background: #000;
+    background: url('../img/bubbles.png') 50% 20% no-repeat fade(@color-hover, 40%);
+    opacity: 0;
+    .transition;
+   }
+}

@@ -3,7 +3,7 @@ $(document).ready(function(){
     // Slider in header
     $('.top-slider').slick({
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
         pauseOnHover: false,
         draggable: false,
         nextArrow: $('.arrow-right'),
@@ -12,7 +12,6 @@ $(document).ready(function(){
 
     // Slider for future events
     $('.event-slider').slick({
-        draggable: false,
         rows: 2,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -20,14 +19,23 @@ $(document).ready(function(){
         prevArrow: $('.arrow-event-left')
     });
 
-
     // Animation through wow.js
     var animateIn = new WOW({
         boxClass: 'animateIn',
         animateClass: 'animated fadeInUp',
-        offset: 300,
+        offset: 250,
         mobile: false
     });
 
     animateIn.init();
+
+    // Gallery
+    $('.gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true,
+            preload: [1, 2]
+        }
+    });
 });
