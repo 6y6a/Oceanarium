@@ -38,4 +38,7 @@ $(document).ready(function(){
             preload: [1, 2]
         }
     });
+
+    // Responsive menu
+    $('.menu').slicknav();
 });

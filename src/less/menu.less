@@ -1,0 +1,67 @@
+.menu-wrapper {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+
+  .container {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+}
+
+.brand {
+  float:left;
+  padding-top: 28px;
+}
+
+.menu {
+  float: right;
+
+  .menu-item {
+    float: left;
+    padding: 30px 10px;
+    font: 100 18px/1 "Roboto", sans-serif;
+    text-transform: uppercase;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+    cursor: pointer;
+    .transition;
+
+    &:hover {
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+    }
+
+    a {
+      text-decoration: none;
+      color: @color-text;
+    }
+  }
+}
+
+.menu-wrapper {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-wrapper {
+    display: block;
+  }
+
+  .slicknav_menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .brand {
+    padding-top: 17px;
+  }
+  .menu {
+    .menu-item {
+      padding: 20px 5px;
+      font: 100 14px/1 "Roboto", sans-serif;
+    }
+  }
+}
