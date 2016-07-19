@@ -7,7 +7,13 @@ $(document).ready(function(){
         pauseOnHover: false,
         draggable: false,
         nextArrow: $('.arrow-right'),
-        prevArrow: $('.arrow-left')
+        prevArrow: $('.arrow-left'),
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false
+            }
+        }]
     });
 
     // Slider for future events
@@ -16,8 +22,30 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: $('.arrow-event-right'),
-        prevArrow: $('.arrow-event-left')
+        prevArrow: $('.arrow-event-left'),
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    rows: 1
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
+
 
     // Animation through wow.js
     var animateIn = new WOW({

@@ -10,15 +10,15 @@
   }
 
   .slide-1 {
-    .bg-img('slide1.jpg', #101f1f)
+    .bg-img('slide-lg-1.jpg', #101f1f)
   }
 
   .slide-2 {
-    .bg-img('slide2.jpg', #101f1f)
+    .bg-img('slide-lg-2.jpg', #101f1f)
   }
 
   .slide-3 {
-    .bg-img('slide3.jpg', #101f1f)
+    .bg-img('slide-lg-3.jpg', #101f1f)
   }
 }
 
@@ -26,13 +26,14 @@
 .arrow-left,
 .arrow-right {
   position: absolute;
-  top: 70px;
+  top: 50%;
   width: 85px;
   height: 85px;
   background-color: transparent;
   border: 3px solid #fff;
   border-radius: 50%;
   color: #fff;
+  transform: translate(0, -50%);
 
   &:hover {
     border-color:  @color-hover;
@@ -71,7 +72,7 @@
 }
 
 .arrow-left {
-  left: -85px;
+  left: 0;
 
   .triangle-left {
     right: ~'calc(50% - 8px)';
@@ -79,18 +80,19 @@
 }
 
 .arrow-right {
-  right: -85px;
+  right: 0;
 
   .triangle-right {
     right: ~'calc(50% - 32px)';
   }
 }
 
-// Description on slides
+// Event slider
 .event {
   position: relative;
 }
 
+// Description on slides
 .desc {
   position: absolute;
   bottom: 0;
@@ -146,37 +148,178 @@
 
 // Arrows
 .arrow-event-left {
-  margin-right: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
 
   .triangle-left {
     border-color: transparent #000 transparent transparent;
     border-width: 7px 11px;
     .transition;
+  }
 
-    &:hover {
-      border-color: transparent @color-hover transparent transparent;
-    }
+  &:hover {
+    .triangle-left { border-color: transparent @color-hover transparent transparent; }
   }
 }
 
 .arrow-event-right {
-  margin-left: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
 
   .triangle-right {
     border-color: transparent  transparent transparent #000;
     border-width: 7px 11px;
-    .transition(all 0.2s ease);
+    .transition;
+  }
 
-    &:hover {
-      border-color: transparent  transparent transparent @color-hover;
+  &:hover {
+    .triangle-right { border-color: transparent transparent transparent @color-hover; }
+  }
+}
+
+// Media queries
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .arrow-left,
+  .arrow-right {
+    width: 65px;
+    height: 65px;
+  }
+
+  .desc {
+    padding: 20px 15px;
+
+    h4 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 14px;
     }
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .arrow-left,
+  .arrow-right {
+    width: 55px;
+    height: 55px;
+  }
 
+  .top-slider {
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+      height: 800px;
+    }
 
+    .slide-1 {
+      .bg-img('slide-md-1.jpg', #101f1f)
+    }
 
+    .slide-2 {
+      .bg-img('slide-md-2.jpg', #101f1f)
+    }
 
+    .slide-3 {
+      .bg-img('slide-md-3.jpg', #101f1f)
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
+
+  .top-slider {
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+      height: 600px;
+    }
+
+    .slide-1 {
+      .bg-img('slide-sm-1.jpg', #101f1f)
+    }
+
+    .slide-2 {
+      .bg-img('slide-sm-2.jpg', #101f1f)
+    }
+
+    .slide-3 {
+      .bg-img('slide-sm-3.jpg', #101f1f)
+    }
+  }
+
+  .date {
+    right: 0;
+    padding: 5px;
+    border-radius: 0;
+    text-align: left;
+    .num {
+      display: inline-block;
+      font-size: 25px;
+      vertical-align: middle;
+    }
+    .full {
+      display: inline-block;
+      font-size: 12px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 479px) {
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
+
+  .top-slider {
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+      height: 600px;
+    }
+
+    .slide-1 {
+      .bg-img('slide-xs-1.jpg', #101f1f)
+    }
+
+    .slide-2 {
+      .bg-img('slide-xs-2.jpg', #101f1f)
+    }
+
+    .slide-3 {
+      .bg-img('slide-xs-3.jpg', #101f1f)
+    }
+  }
+
+  .date {
+    padding: 5px;
+    .num {
+      font-size: 20px;
+    }
+    .full {
+      font-size: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 991px) {
+  .position {
+    font-size: 20px;
+  }
+
+  .desc {
+    height: 0;
+    padding: 0;
+  }
+}
 
 
 

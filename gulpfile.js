@@ -53,7 +53,7 @@ gulp.task('server', ['make:less', 'make:lib-less', 'make:lib-js'], function(){
 
     gulp.watch('src/less/**/*.less', ['make:less']);
     gulp.watch('src/libs/bootstrap/less/**/*.less', ['make:lib-less']);
-    gulp.watch('src/libs/slicknav/**/*.less', ['make:lib-less']);
+    gulp.watch('src/libs/slicknav/dist/*.less', ['make:lib-less']);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);
 });
